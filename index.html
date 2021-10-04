@@ -10,14 +10,15 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
 <style>
-body{
-	width: auto;
-	animation: gradient 15s ease infinite, fadeInAnimation ease 3s;
+
+html, body{
+  width: 100%;
+  animation: gradient 15s ease infinite, fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    margin: 5%;
     background-color: #F4C7EE;
     overflow-x: hidden;
+    margin: 0;
 }
   
 @keyframes fadeInAnimation {
@@ -45,6 +46,10 @@ body{
   to { 
     transform: translateX(-20%);
   }
+}
+
+.contentbox{
+    margin: 5%;
 }
 
 a{
@@ -214,6 +219,7 @@ color: #162BF4;
 </head>
 <body>
 
+<div class="contentbox">
 <div class="id">
 GORDON BONNAR
 </div>
@@ -234,7 +240,7 @@ Digital Design<br>
 Branding & Identity Design<br>
 Design for Print & Campaigns<br>
 </div>-->
-
+</div>
 <div class="container">
   <div class="scrolling">
         User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • Digital Design • 
@@ -268,7 +274,7 @@ Design for Print & Campaigns<br>
   <div class="scrolling" aria-hidden="true">
     User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • Digital Design • 
   </div></div>
-
+<div class="contentbox">
 <div class="col3 type2">
 <span class="type5"><strong>Some brands I've worked on</strong></span><br>
 O2, Architecture & Design Scotland, University of Strathclyde, Graham's The Family Dairy, Wedgwood, Royal Doulton, Waterford, Borders Biscuits, The University of Edinburgh, Sainsburys, SQA, Honda Finance, Aviva, Comic Relief
@@ -300,6 +306,6 @@ var year = today.getFullYear()
 document.write(year)
 </script><!--?php echo date("Y"); ?--> Gordon Bonnar
 </div>
-
+</div>
 </body>
 </html>
