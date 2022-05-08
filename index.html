@@ -1,14 +1,11 @@
 <html>
 <head>
-  <title>Gordon Bonnar – Experience Designer</title>
+  <title>Gordon Bonnar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700;800&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/jpg" href="Favicon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
@@ -21,7 +18,7 @@ html, body{
   animation: gradient 15s ease infinite, fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-color: #ffffff;
+    background-color: #F8EBEE;
     overflow-x: hidden;
     margin: 0;
 }
@@ -35,66 +32,115 @@ html, body{
      }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to { 
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes marquee2 {
-  from {
-    transform: translateX(-120%);
-  }
-  to { 
-    transform: translateX(-20%);
-  }
-}
-
 .contentbox{
-    margin: 5% 5% 5% 5%;
+    margin: 10% 5% 5% 5%;
 }
 
-a{
-	color: #1c2bc7 !important;
-    text-decoration: underline !important;
+a.agency{
+  border:2px dashed;
+  border-radius: 8px;
+  border-color: #252525;
+  padding: 4px 12px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
 }
 
-a:hover{
-    color: #252525 !important;
-    text-decoration: none  !important;
+a.agency:hover{
+  border:2px dashed;
+  border-radius: 8px;
+  border-color: #252525;
+  padding: 4px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #252525;
+}
+
+a.twitter{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #252525;
+  padding: 4px 30px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+a.twitter:hover{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #1DA1F2;
+  padding: 4px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #1DA1F2;
+}
+
+a.instagram{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #252525;
+  padding: 4px 30px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+a.instagram:hover{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #8a3ab9;
+  padding: 4px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #8a3ab9;
+}
+
+a.linkedin{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #252525;
+  padding: 4px 30px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+a.linkedin:hover{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #0072b1;
+  padding: 4px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0072b1;
 }
 
 
 .col{
 max-width: 1280px;
-margin: 80px 0; 
+margin: 60px auto;
+text-align: center;
 }
 
 .col2{
 max-width: 1080px;
-margin: 80px 0; 
+margin: 20px auto; 
+text-align: center;
 }
 
 .col3{
 max-width: 880px;
-margin: 60px 0; 
-}
-
-.id{
-	font-family: 'Open Sans', sans-serif;
-line-height: 1.4em;
-font-size: 1.4em;
-font-weight: 400;
-margin: 20px 0;
-color: #252525;
+margin: 40px auto;
+text-align: center;
 }
 
 .type{
-font-family: 'Cormorant Garamond', serif;
-font-weight: 400;
+font-family: 'Amiko', sans-serif;
+font-weight: 300;
 line-height: 1.4em;
 font-size: 3em;
 color: #252525;
@@ -103,68 +149,32 @@ color: #252525;
 .type2{
 font-family: 'Open Sans', sans-serif;
 line-height: 1.4em;
-font-size: 1.4em;
+font-size: 2em;
 color: #252525;
 }
 
 .type3{
 font-family: 'Open Sans', sans-serif;
-line-height: 1.8em;
-font-size: 1.4em;
-color: #252525;
-}
-
-.smalltype{
-font-size: 0.8em;
-color: #252525;
-}
-
-.type4{
-font-family: 'Open Sans', sans-serif;
-line-height: 1em;
-font-size: 1.2em;
-color: #252525;
-}
-
-.type5{
-font-family: 'Open Sans', sans-serif;
 font-size: 0.85em;
 line-height: 1.8em;
 text-transform: uppercase;
 color: #252525;
-margin-bottom: 20px;
 }
 
-
-.container {
-font-family: 'Prompt', sans-serif;
-font-weight: 700;
-line-height: 1.4em;
-font-size: 3em;
-text-transform: uppercase;
-color: #252525;
-white-space: nowrap;
+.icon{
+  max-width: max-content;
+  font-size: 40px;
+  margin: 0 auto;
 }
 
-.scrolling {
-  animation: marquee 20s linear infinite;
-  display: inline-block;
-}
-
-.scrolling2 {
-  animation: marquee2 20s linear infinite;
-  display: inline-block;
-}
-
-
-@media only screen and (max-device-width: 768px) { 
+@media only screen and (max-width: 768px) { 
 
 body {
     overflow-x: hidden;
 }
 
 .contentbox{
-    margin: 8% 5% 5% 5%;
+    margin: 20% 8% 20% 8%;
 }
 
 .col{
@@ -172,72 +182,71 @@ margin: 40px 0 40px 0;
 }
 
 .col2{
-margin: 40px 0 60px 0; 
+margin: 20px 0 20px 0; 
 }
 
 .col3{
-margin: 60px 0; 
+margin: 40px 0; 
 }
   
-    .id{
-    font-family: 'Open Sans', sans-serif;
-line-height: 1em;
-font-size: 1.1em;
-font-weight: 400;
-margin: 20px 0;
-color: #252525;
-}
 
 .type{
-font-family: 'Cormorant Garamond', serif;
+font-family: 'Amiko', sans-serif;
 font-weight: 400;
 line-height: 1.5em;
 font-size: 1.9em;
 color: #252525;
 }
 
-.container {
-font-family: 'Prompt', sans-serif;
-font-weight: 300;
-line-height: 1.2em;
-font-size: 2.4em;
-text-transform: uppercase;
-color: #252525;
-white-space: nowrap;
-}
 
 .type2{
 font-family: 'Open Sans', sans-serif;
-line-height: 1.5em;
-font-size: 1.1em;
+line-height: 2em;
+font-size: 1.4em;
 color: #252525;
 }
 
 .type3{
-font-family: 'Open Sans', sans-serif;
-line-height: 1.8em;
-font-size: 1.1em;
-color: #252525;
-}
-
-.type4{
-font-family: 'Open Sans', sans-serif;
-line-height: 0.8em;
+font-family: 'Amiko', sans-serif;
+line-height: 1.4em;
 font-size: 1em;
 color: #252525;
 }
 
-.type5{
-font-family: 'Open Sans', sans-serif;
-font-size: 0.8em;
-line-height: 1.8em;
-text-transform: uppercase;
-color: #252525;
-margin-bottom: 20px;
+a.twitter{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #252525;
+  padding: 4px 30px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
-.link{
-  line-height: 2em;
+a.instagram{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #252525;
+  padding: 4px 30px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+a.linkedin{
+  border:2px solid;
+  border-radius: 40px;
+  border-color: #252525;
+  padding: 4px 30px;
+  color: #252525;
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
 }
@@ -248,101 +257,26 @@ margin-bottom: 20px;
 <body>
 
 <div class="contentbox">
-<div class="id">
-GORDON BONNAR
-</div>
 
 <div class="col type">
 Working across a variety of creative outputs with a focus on user experience and digital design, delivering simple and effective solutions.
 </div>
-
-<!--<div class="col2 type2">
-Througout my career in the creative industry I've produced work for a range of clients, from small independents and start ups to governing bodies and global brands. Throughout every project the end user's goals and their experience, balanced with the client's needs and objectives, always form the creative process and ultimately the outcome. <span style="white-space: nowrap;">I'm currently</span> <strong>Experience Design Director</strong> at <a href="https://parkhouseagency.com/" target="_blank" class="left">Parkhouse</a>.
-</div>-->
-
-
+<div class="col3">
+<div class="type3"><strong>Currently</strong></div>
 <div class="col2 type2">
-Producing work for a range of clients, from small independents and start ups to governing bodies and global brands. Adopting a human centered design approach, ensuring throughout every project that the end user's goals and their experience forms the creative approach and ultimately the solution. <span style="white-space: nowrap;">I'm currently</span> Experience Design Director at <a href="https://parkhouseagency.com/" target="_blank" class="left">Parkhouse</a>.
+Experience Design Director at <a href="https://parkhouseagency.com/" target="_blank" class="agency">Parkhouse</a>
+</div>
 </div>
 
 <div class="col3">
-<div class="type5"><strong>Capabilities</strong></div>
-<div class="type2">User Experience Design<br>
-User Interface Design<br>
-Design Systems<br>
-Digital Design<br>
-Digital Strategy<br>
-Branding<br>
+<div class="type3"><strong>Follow</strong></div>
+<div class="col2 type2">
+<a href="https://twitter.com/GordonBonnar" target="_blank" class="twitter .btn-block">Twitter</a><a href="https://www.instagram.com/gordonbonnar/" target="_blank" class="instagram">Instagram</a><a href="https://www.linkedin.com/in/gordonbonnar/" target="_blank" class="linkedin">LinkedIn</a>
 </div>
 </div>
-<!--<div class="container">
-  <div class="scrolling">
-        User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • Digital Design • 
-      </div>
-      <div class="scrolling" aria-hidden="true">
-    User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • Digital Design • 
-  </div>
-  <div class="scrolling" aria-hidden="true">
-    User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • Digital Design • 
-  </div></div>
 
+<div class="icon">&#9994</div>
 
-  <div class="container">
-  <div class="scrolling2" aria-hidden="true">
-        Branding & Identity Design • Design for Print & Campaigns • Branding & Identity Design • Design for Print & Campaigns • 
-      </div>
-      <div class="scrolling2" aria-hidden="true">
-    Branding & Identity Design • Design for Print & Campaigns • Branding & Identity Design • Design for Print & Campaigns • 
-  </div>
-  <div class="scrolling2" aria-hidden="true">
-    Branding & Identity Design • Design for Print & Campaigns • Branding & Identity Design • Design for Print & Campaigns • 
-  </div></div>
-
-  <div class="container">
-  <div class="scrolling" aria-hidden="true">
-        Digital Design • User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • 
-      </div>
-      <div class="scrolling" aria-hidden="true">
-    Digital Design • User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • 
-  </div>
-  <div class="scrolling" aria-hidden="true">
-    Digital Design • User Experience Design • User Interface Design • Digital Design • User Experience Design • User Interface Design • 
-  </div></div>-->
-
-<div class="col3">
-  <div class="type5"><strong>Some brand names</strong></div>
-  <div class="type2">O2, Architecture & Design Scotland, University of Strathclyde, Graham's The Family Dairy, Wedgwood, Royal Doulton, Waterford, Borders Biscuits, Sainsburys, The University of Edinburgh, SQA, Aviva, Honda Finance, Comic Relief, GWR</div>
-</div>
-
-<div class="col3">
-  <div class="type5"><strong>Some live projects</strong></div>
-    <div class="type3">
-      <a href="https://www.graduateshow.eca.ed.ac.uk/" target="_blank" class="link">ECA Graduate Show</a><br>
-<a href="https://fightingmalaria.co.uk/" target="_blank" class="link">Comic Relief</a><br>
-<a href="https://www.jupiterartland.org/" target="_blank" class="link">Jupiter Artland</a><br>
-<a href="https://www.law.ed.ac.uk/" target="_blank" class="link">UoE Law School</a><br>
-<a href="https://www.trg.ed.ac.uk/" target="_blank" class="link">Talbot Rice Gallery</a><br>
-<a href="https://materials.ads.org.uk/" target="_blank" class="link">Material Considerations</a><br>
-<span class="smalltype">&copy; Parkhouse</span>
-    </div>
-</div>
-
-<div class="col3 type2">
-hello@gordonbonnar.com<br>
-+44 (0)7745 033 874<br><br>
-
-<a href="https://twitter.com/GordonBonnar" target="_blank" class="link">Twitter</a><br>
-<a href="https://www.instagram.com/gordonbonnar/" target="_blank" class="link">Instagram</a><br>
-<a href="https://www.linkedin.com/in/gordonbonnar/" target="_blank" class="link">LinkedIn</a>
-</div>
-
-<div class="col3 type4">
-&copy; <script language="javascript" type="text/javascript">
-var today = new Date()
-var year = today.getFullYear()
-document.write(year)
-</script><!--?php echo date("Y"); ?--> Gordon Bonnar
-</div>
 </div>
 </body>
 </html>
