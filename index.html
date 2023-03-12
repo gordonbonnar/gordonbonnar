@@ -150,6 +150,11 @@ height: fit-content;
 .services{
   max-width: 1440px;
   padding: 4% 4% 8% 4%;
+  display: block;
+}
+
+.services_mobile{
+  display: none;
 }
 
 .socials{
@@ -262,17 +267,19 @@ font-size: 1.8em;
 }
 
 .heading{
-  max-width: 1440px;
   padding: 12% 6% 6% 6%;
 }
 
 .services{
-  max-width: 1440px;
+  display: none;
+}
+
+.services_mobile{
   padding: 6% 6% 12% 6%;
+  display: block;
 }
 
 .socials{
-  max-width: 1440px;
   padding: 6% 6% 12% 6%;
 }
 
@@ -317,10 +324,14 @@ border-bottom: 1px solid rgba(180, 180, 180, 0.4);
 </div>
 
 <div class="row2">
-  <div class="services">
+<div class="services">
   <p class="tag">Capabilities</p>
   <div class="list"><h3>• Design Strategy<br/>• User Experience Design<br/>• User Interface Design<br/>• Digital Design</h3></div>
   <div class="list"><h3>• Information Architecture<br/>• Design Systems<br/>• Brand Identity<br/>• Brand Positioning</h3></div>
+</div>
+<div class="services_mobile">
+  <p class="tag">Capabilities</p>
+  <div class="list"><h3>• Design Strategy<br/>• User Experience Design<br/>• User Interface Design<br/>• Digital Design<br />• Information Architecture<br/>• Design Systems<br/>• Brand Identity<br/>• Brand Positioning</h3></div>
 </div>
 </div>
 
