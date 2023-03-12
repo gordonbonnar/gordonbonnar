@@ -3,9 +3,7 @@
   <title>Gordon Bonnar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,300&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/jpg" href="Favicon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
@@ -14,11 +12,9 @@
 <style>
 
 html, body{
-  width: 100%;
-  animation: gradient 15s ease infinite, fadeInAnimation ease 3s;
+  animation: gradient 15s ease infinite, fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-color: #F8EBEE;
     overflow-x: hidden;
     margin: 0;
 }
@@ -32,252 +28,307 @@ html, body{
      }
 }
 
-.contentbox{
-    margin: 10% 5% 5% 5%;
+.background{
+  width:100vw;
+  height:100vh;
+  background: #F4F4F4;
+  color: #1a1a1a;
+  z-index: -1;
+  position: absolute;
+  overflow: scroll;
+  transition: 0.3s;
+}
+
+label {
+  width:86px;
+  height:44px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  background: #F4F4F4;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(40,40,40,0.2), inset 0px -5px 15px rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+
+label:after {
+  content: "";
+  width:40px;
+  height: 40px;
+  position: absolute;
+  top:2px;
+  left:2px;
+  background: linear-gradient(180deg,#ffffff,#dfdfdf);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+input {
+  width: 0;
+  height: 0;
+  display: none;
+  visibility: hidden;
+}
+input:checked + label {
+  background: #242424;
+}
+input:checked + label:after {
+  left:83px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg,#555555,#3a3a3a);
+}
+label, label:after {
+  transition: 0.3s;
+}
+label:active:after{ 
+  width: 40px; 
+}
+
+input:checked + label + .background {
+  background:#1a1a1a;
+  color: #ffffff;
+}
+
+label svg {
+  position: absolute;
+  width: 120px;
+  top:11px;
+  z-index: 100;
+}
+label svg.sun {
+  left: 9px;
+  fill: none;
+  stroke: #1a1a1a;
+  transition: 0.3s;
+}
+label svg.moon {
+  left:52px;
+  stroke: #1a1a1a;
+  fill: none;
+  transition: 0.3s;
+}
+input:checked + label svg.sun {
+  stroke: #f0f0f0;
+  fill: none;
+}
+input:checked + label svg.moon {
+  stroke: #f0f0f0;
+  fill: none;
+}
+
+.row1{
+text-align: left;
+padding-bottom: 60px;
+height: fit-content;
+border-bottom: 1px solid rgba(180, 180, 180, 0.4);
+}
+
+.row2{
+text-align: left;
+padding: 60px 0 120px 0;
+height: fit-content;
+border-bottom: 1px solid rgba(180, 180, 180, 0.4);
+}
+
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row3{
+text-align: left;
+padding: 60px 0;
+height: fit-content;
+}
+
+.heading{
+  max-width: 1440px;
+  padding: 8% 4% 4% 4%;
+}
+
+.services{
+  max-width: 1440px;
+  padding: 4% 4% 8% 4%;
+}
+
+.socials{
+  max-width: 1440px;
+  padding: 4% 4% 8% 4%;
+}
+
+h1{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+line-height: 1.4em;
+font-size: 3.2em;
+}
+
+h2{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+line-height: 1.2em;
+font-size: 2em;
+}
+
+h3{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+line-height: 1.6em;
+font-size: 1.3em;
+}
+
+.small{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 0.9em;
+line-height: 1em;
+text-transform: uppercase;
+opacity: 0.5;
+}
+
+.tag{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 0.9em;
+border: 1px solid;
+padding: 6px 12px;
+border-radius: 40px;
+width: fit-content;
+}
+
+a{
+  text-decoration: none;
 }
 
 a.agency{
-  border:2px dashed;
-  border-radius: 8px;
-  border-color: #252525;
-  padding: 4px 12px;
-  margin-left:6px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
+  color: inherit;
+  display: inline-block;
+  position: relative;
 }
 
-a.agency:hover{
-  border:2px dashed;
-  border-radius: 8px;
-  border-color: #252525;
-  padding: 4px 12px;
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #252525;
+a.agency::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #cccccc;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
-a.twitter{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #252525;
-  padding: 4px 30px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
-  margin-right: 20px;
+a.agency:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-a.twitter:hover{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #1DA1F2;
-  padding: 4px 30px;
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #1DA1F2;
+.list{
+  float: left;
+  width: 50%;
 }
 
-a.instagram{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #252525;
-  padding: 4px 30px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
-  margin-right: 20px;
-}
-
-a.instagram:hover{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #8a3ab9;
-  padding: 4px 30px;
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #8a3ab9;
-}
-
-a.linkedin{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #252525;
-  padding: 4px 30px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
-  margin-right: 20px;
-}
-
-a.linkedin:hover{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #0072b1;
-  padding: 4px 30px;
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #0072b1;
-}
-
-
-.col{
-max-width: 1280px;
-margin: 60px auto;
-text-align: center;
-}
-
-.col2{
-max-width: 1080px;
-margin: 20px auto; 
-text-align: center;
-}
-
-.col3{
-max-width: 880px;
-margin: 40px auto;
-text-align: center;
-}
-
-.type{
-font-family: 'Amiko', sans-serif;
-font-weight: 300;
-line-height: 1.4em;
-font-size: 3em;
-color: #252525;
-}
-
-.type2{
-font-family: 'Open Sans', sans-serif;
-line-height: 1.4em;
-font-size: 2em;
-color: #252525;
-}
-
-.type3{
-font-family: 'Open Sans', sans-serif;
-font-size: 0.85em;
-line-height: 1.8em;
-text-transform: uppercase;
-color: #252525;
-}
-
-.icon{
-  max-width: max-content;
-  font-size: 40px;
-  margin: 0 auto;
-}
 
 @media only screen and (max-width: 768px) { 
 
-body {
-    overflow-x: hidden;
+.list{
+  width: 100%;
 }
 
-.contentbox{
-    margin: 20% 8% 20% 8%;
-}
-
-.col{
-margin: 40px 0 40px 0; 
-}
-
-.col2{
-margin: 20px 0 20px 0; 
-}
-
-.col3{
-margin: 40px 0; 
-}
-  
-
-.type{
-font-family: 'Amiko', sans-serif;
+.tag{
+font-family: 'Inter', sans-serif;
 font-weight: 400;
-line-height: 1.5em;
-font-size: 1.9em;
-color: #252525;
+font-size: 0.8em;
+border: 1px solid;
+padding: 6px 12px;
+border-radius: 40px;
+width: fit-content;
 }
 
-
-.type2{
-font-family: 'Open Sans', sans-serif;
-line-height: 2em;
-font-size: 1.4em;
-color: #252525;
+h1{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+line-height: 1.2em;
+font-size: 2.7em;
 }
 
-.type3{
-font-family: 'Amiko', sans-serif;
-line-height: 1.4em;
-font-size: 1em;
-color: #252525;
+h2{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+line-height: 1.2em;
+font-size: 1.8em;
 }
 
-a.twitter{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #252525;
-  padding: 4px 30px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
-  display: block;
-  margin: 0 auto 20px auto;
+.heading{
+  max-width: 1440px;
+  padding: 12% 6% 6% 6%;
 }
 
-a.instagram{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #252525;
-  padding: 4px 30px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
-  display: block;
-  margin: 0 auto 20px auto;
+.services{
+  max-width: 1440px;
+  padding: 6% 6% 12% 6%;
 }
 
-a.linkedin{
-  border:2px solid;
-  border-radius: 40px;
-  border-color: #252525;
-  padding: 4px 30px;
-  color: #252525;
-  text-decoration: none;
-  background-color: transparent;
-  display: block;
-  margin: 0 auto 20px auto;
+.socials{
+  max-width: 1440px;
+  padding: 6% 6% 12% 6%;
 }
 
+.row1{
+text-align: left;
+padding: 40px 0 60px 0;
+height: fit-content;
+border-bottom: 1px solid rgba(180, 180, 180, 0.4);
 }
 
+.row2{
+text-align: left;
+padding: 60px 0 100px 0;
+height: fit-content;
+border-bottom: 1px solid rgba(180, 180, 180, 0.4);
+}
+
+  }
 </style>
-
 </head>
 <body>
+<input type="checkbox" id="darkmode-toggle"/>
+<label for="darkmode-toggle">
+   <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 12H5M5.00006 19L7.00006 17M12 19V21M17 17L19 19M5 5L7 7M19 12H21M16.9999 7L18.9999 5M12 3V5M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+   <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.8667 15.3164C20.9187 15.1983 20.8006 15.0785 20.6792 15.1223V15.1223C17.3165 16.3368 13.4497 15.6201 10.9124 13.0837C8.38689 10.5592 7.66861 6.7169 8.86147 3.36559V3.36559C8.91069 3.22729 8.77418 3.09296 8.64021 3.15299C8.63117 3.15704 8.62214 3.16111 8.61311 3.16518C6.75765 4.00313 5.10654 5.4166 4.13683 7.19736C3.1002 9.10101 2.75831 11.3058 3.16975 13.4339C3.58119 15.5619 4.72034 17.4806 6.39193 18.861C8.06352 20.2414 10.1634 20.9977 12.3317 21C14.1962 21.0001 16.0181 20.4424 17.5629 19.3987C18.9891 18.4352 20.1189 16.9756 20.8311 15.3962C20.8431 15.3697 20.8549 15.343 20.8667 15.3164Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</label>
 
-<div class="contentbox">
 
-<div class="col type">
-Working across a variety of creative outputs with a focus on user experience and digital design, delivering simple and effective solutions.
-</div>
-<div class="col3">
-<div class="type3"><strong>Currently</strong></div>
-<div class="col2 type2">
-Head of Digital Design at <a href="https://www.civicuk.com/" target="_blank" class="agency">CIVIC</a>
-</div>
-</div>
 
-<div class="col3">
-<div class="type3"><strong>Follow</strong></div>
-<div class="col2 type2">
-<a href="https://twitter.com/GordonBonnar" target="_blank" class="twitter .btn-block">Twitter</a><a href="https://www.instagram.com/gordonbonnar/" target="_blank" class="instagram">Instagram</a><a href="https://www.linkedin.com/in/gordonbonnar/" target="_blank" class="linkedin">LinkedIn</a>
+<div class="background">
+<div class="row1">
+  <div class="heading">
+  <p class="tag">Gordon Bonnar</p>
+  <h1>Designer with a focus on user experience and <span style="white-space: nowrap;">digital design,</span> delivering simple and effective solutions.</h1>
+  <p class="small">Currently</p>
+  <h2>Head of Digital Design at <a href="https://www.civicuk.com/" target="_blank" class="agency" style="font-style: italic;">CIVIC</a></h2>
 </div>
 </div>
 
-<div class="icon">&#9994</div>
+<div class="row2">
+  <div class="services">
+  <p class="tag">Capabilities</p>
+  <div class="list"><h3>• Design Strategy<br/>• User Experience Design<br/>• User Interface Design<br/>• Digital Design</h3></div>
+  <div class="list"><h3>• Information Architecture<br/>• Design Systems<br/>• Brand Identity<br/>• Brand Positioning</h3></div>
+</div>
+</div>
 
+<div class="row3">
+  <div class="socials">
+  <p class="tag">Follow</p>
+  <h2><a href="https://www.instagram.com/gordonbonnar/" target="_blank" class="agency">INSTAGRAM</a> • <a href="https://www.linkedin.com/in/gordonbonnar/" target="_blank" class="agency">LINKEDIN</a></h2>
+</div>
 </div>
 </body>
 </html>
