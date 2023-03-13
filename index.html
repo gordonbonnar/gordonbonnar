@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
   <title>Gordon Bonnar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,8 @@
 html, body{
   animation: gradient 15s ease infinite, fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
+    width:100%;
+    height:100%;
     animation-fill-mode: forwards;
     overflow-x: hidden !important;
     margin: 0;
@@ -34,8 +36,8 @@ html, body{
   background: #F4F4F4;
   color: #1a1a1a;
   z-index: -1;
-  position: absolute;
-  overflow: scroll;
+  position: relative;
+  overflow-y: scroll;
   overflow-x: hidden;
   transition: 0.3s;
 }
