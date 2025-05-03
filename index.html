@@ -3,7 +3,8 @@
   <title>Gordon Bonnar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,300&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ixd4wtb.css">
 <link rel="shortcut icon" type="image/jpg" href="Favicon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <!--<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />-->
@@ -44,8 +45,8 @@ body{
 .background{
   width:100%;
   height:100%;
-  background: #F4F4F4;
-  color: #1a1a1a;
+  background: #ffffff;
+  color: #0000ff;
   z-index: -1;
   overflow: scroll;
   transition: 0.3s;
@@ -58,10 +59,11 @@ label {
   top: 20px;
   right: 20px;
   display: block;
-  background: #F4F4F4;
+  background: #ffffff;
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(40,40,40,0.2), inset 0px -5px 15px rgba(255,255,255,0.2);
+  border: 1px solid #0000ff;
   cursor: pointer;
+  z-index: 999999;
 }
 
 label:after {
@@ -71,9 +73,8 @@ label:after {
   position: absolute;
   top:2px;
   left:2px;
-  background: linear-gradient(180deg,#ffffff,#dfdfdf);
+  background: #0000ff;
   border-radius: 180px;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 input {
   width: 0;
@@ -82,11 +83,12 @@ input {
   visibility: hidden;
 }
 input:checked + label {
-  background: #242424;
+  background: #000000;
+  border: 1px solid #ffff00;
 }
 input:checked + label:after {
   left:43px;
-  background: linear-gradient(180deg,#555555,#3a3a3a);
+  background: #ffff00;
 }
 label, label:after {
   transition: 0.4s;
@@ -96,14 +98,17 @@ label:active:after{
 }
 
 input:checked + label + .background {
-  background:#1a1a1a;
-  color: #ffffff;
+  background:#000000;
+  color: #ffff00;
 }
 
 input:checked + label + .background .logo {
-  fill: #ffffff;
+  fill: #ffff00;
 }
 
+input:checked + label + .background a.agency::after {
+  background-color: #ffff00;
+}
 
 label svg {
   position: absolute;
@@ -114,26 +119,26 @@ label svg {
 label svg.sun {
   left: 9px;
   fill: none;
-  stroke: #1a1a1a;
+  stroke: #ffffff;
   transition: 0.3s;
 }
 label svg.moon {
   left:52px;
-  stroke: #1a1a1a;
+  stroke: #0000ff;
   fill: none;
   transition: 0.3s;
 }
 input:checked + label svg.sun {
-  stroke: #f0f0f0;
+  stroke: #ffff00;
   fill: none;
 }
 input:checked + label svg.moon {
-  stroke: #f0f0f0;
+  stroke: #000000;
   fill: none;
 }
 
 .logo {
-  fill:#444;
+  fill:#0000ff;
   max-height: 70px;
   width: 100%;
   padding: 0px 32px;
@@ -203,9 +208,9 @@ height: fit-content;
 }
 
 h1{
-font-family: 'Inter', sans-serif;
+font-family: 'Special Gothic Expanded One', sans-serif;
 font-weight: 400;
-line-height: 1.4em;
+line-height: 1.1em;
 font-size: 3.2em;
 }
 
@@ -226,10 +231,21 @@ font-size: 1.3em;
 .small{
 font-family: 'Inter', sans-serif;
 font-weight: 400;
-font-size: 0.9em;
+font-size: 1em;
 line-height: 1em;
-text-transform: uppercase;
-opacity: 0.5;
+
+}
+
+.design{
+font-family: "yink", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1.2em;
+}
+
+.impact{
+font-family: 'Special Gothic Expanded One', sans-serif;
+font-weight: 400;
 }
 
 .tag{
@@ -271,10 +287,11 @@ a.agency::after {
   height: 3px;
   bottom: 0;
   left: 0;
-  background-color: #cccccc;
+  background-color: #0000ff;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
+
 
 a.agency:hover::after {
   transform: scaleX(1);
@@ -323,7 +340,7 @@ margin-bottom: 40px;
 }
 
 .logo {
-  fill:#444;
+  fill:#0000ff;
   max-height: 70px;
   max-width: 160;
   padding: 0px 20px;
@@ -341,10 +358,10 @@ margin-bottom: 40px;
 }
 
 h1{
-font-family: 'Inter', sans-serif;
+font-family: 'Special Gothic Expanded One', sans-serif;
 font-weight: 400;
-line-height: 1.2em;
-font-size: 2.2em;
+line-height: 1.1em;
+font-size: 2.7em;
 }
 
 h2{
@@ -405,9 +422,9 @@ border-bottom: 1px solid rgba(180, 180, 180, 0.4);
 <div class="background">
 <div class="row1">
   <div class="heading">
-  <p class="tag">Gordon Bonnar</p>
-  <h1>Blending thoughtful design with intuitive user experiences that feel effortless<span style="white-space: nowrap;">—where</span> creativity meets usablity and every interaction is intentially crafted for clarity, engagement and impact.</h1>
-  <p class="small">Currently</p>
+  <h1>Blending thoughtful <span class="design">design</span> with intuitive user experiences that feel effortless</h1>
+    <h2><span style="white-space: nowrap;">—where</span> creativity meets usablity and every interaction is intentially crafted for clarity, engagement and <span class="impact">impact</span>.</h2>
+  <p class="small">Currently:</p>
   <h2>Head of Digital Design <span style="white-space: nowrap;">at <a href="https://www.civicuk.com/" target="_blank" class="agency" style="font-style: italic;">CIVIC</a></span></h2>
 </div>
 </div>
@@ -415,12 +432,44 @@ border-bottom: 1px solid rgba(180, 180, 180, 0.4);
 <div class="row2">
 <div class="services">
   <p class="tag">Capabilities</p>
-  <div class="list"><h3>• Design Strategy<br/>• User Experience Design<br/>• User Interface Design<br/>• Digital Design</h3></div>
-  <div class="list"><h3>• Prototyping<br/>• Design Systems<br/>• Brand Identity<br/>• Creative Design</h3></div>
+  <div class="list"><h3><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Design Strategy<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> User Experience Design<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> User Interface Design<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Digital Design</h3></div>
+  <div class="list"><h3><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Prototyping<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Design Systems<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Brand Identity<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Creative Design</h3></div>
 </div>
 <div class="services_mobile">
   <p class="tag">Capabilities</p>
-  <div class="list"><h3>• Design Strategy<br/>• User Experience Design<br/>• User Interface Design<br/>• Digital Design<br />• Prototyping<br/>• Design Systems<br/>• Brand Identity<br/>• Creative Design</h3></div>
+  <div class="list"><h3><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Design Strategy<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> User Experience Design<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> User Interface Design<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Digital Design<br /><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Prototyping<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Design Systems<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Brand Identity<br/><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+</svg> Creative Design</h3></div>
 </div>
 </div>
 
